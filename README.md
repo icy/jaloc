@@ -14,16 +14,19 @@ $ git push v1.0.2
 $ circleci --please --deploy --my-tag "v1.0.2"
 
 $ git checkout -b my-qa-branch
+$ git push my-qa-branch
 $ circleci --please --deploy --my-branch "my-qa-branch"
 ```
 
 What's happening here? When you look at your git history, you don't
-know where your deployment point is. You have to learn your branches.
+know where your deployment point is. You have to learn your branches
+or tags.
 
 Let's do this
 
 ```
 $ git tag production-ready -f
+$ git push --force production-ready
 $ circleci --please --deploy --my-tag "production-ready"
 ```
 
@@ -33,7 +36,7 @@ This way helps
 2. It's easy to convert your deployment script to a poll/pull-based
    deployment script.
 3. It's very easy to move your deployment to a different point
-   by overriding the tag (`production-ready`).
+   by overriding the tag.
 
 Deployment tag works like a pointer and it can be resolved to arbitary
 commit in your repository.
