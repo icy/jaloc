@@ -43,5 +43,7 @@ commit in your repository.
 
 There may be some problems
 
-1. It's easier to make mistake (wrong tag!)
-2. If anyone can push tag, that would cause a lot of headache ^^
+1. It's easier to make mistake with wrong tag (but the same issue applies with other methods too)
+2. If anyone can push tag, that would cause a lot of headache ^^ (but the same issue applies with other methods too)
+
+Note, it's better to use annotated tag...
